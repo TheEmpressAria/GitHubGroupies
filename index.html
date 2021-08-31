@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Form and Function</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <h2>HTML Forms</h2>
+
+    <form name="githubGroup" action="form.html" onsubmit="return validateForm()">
+    
+    <h3>Registration Form</h3>
+
+    Username: <input type="text" placeholder = "Github Username" name = "uname" required>
+              <label id="unameLabel" style="color: red; visibility: hidden;">Username should have a minimum of 6 characters</label>
+    <br><br>
+
+    Age: <input type = "number" name = "age" min="16" max="120" required><br><br>
+
+    Employment Status: <input type="radio" name="employmentStatus" value="Employed" checked>
+    Employed
+    <input type="radio" name="employmentStatus" value="Not Employed">
+    Not Employed <br><br>
+
+    Select Languages Used: <input type="checkbox" id="programmingLanguageJavaScript" name="programmingLanguage" value="JavaScript"><label for="programmingLanguageJavaScript">JavaScript</label>
+    <input type="checkbox" id="programmingLanguagePython" name="programmingLanguage" value="Python"><label for="programmingLanguagePython">Python</label>
+    <input type="checkbox" id="programmingLanguageSQL" name="programmingLanguage" value="SQL"><label for="programmingLanguageSQL">SQL</label>
+    <input type="checkbox" id="programmingLanguageC++" name="programmingLanguage" value="C++"><label for="programmingLanguageC++">C++</label>
+    <input type="checkbox" id="programmingLanguageJava" name="programmingLanguage" value="Java"><label for="programmingLanguageJava">Java</label>
+    <input type="checkbox" id="programmingLanguageRuby" name="programmingLanguage" value="Ruby"><label for="programmingLanguageRuby">Ruby</label>
+    <br>
+    <input type="checkbox" id="programmingLanguageTypeScript" name="programmingLanguage" value="TypeScript"><label for="programmingLanguageTypeScript>TypeScript</label>
+    <input type="checkbox" id="programmingLanguageC#" name="programmingLanguage" value="C#"><label for="programmingLanguageC#">C#</label>
+    <input type="checkbox" id="programmingLanguagePHP" name="programmingLanguage" value="PHP"><label for="programmingLanguagePHP">PHP</label>
+    <input type="checkbox" id="programmingLanguageC" name="programmingLanguage" value="C"><label for="programmingLanguageC">C </label>
+    <input type="checkbox" id="programmingLanguageShell" name="programmingLanguage" value="Shell"><label for="programmingLanguageShell">Shell</label>
+              <br><br>
+
+    Interested Activities:
+    <input type="checkbox" id="pullRequests" name="interestedActivities" value="Pull Requests"><label for="pullRequests">Pull Requests</label>
+    <input type="checkbox" id="projectCollaborations" name="interestedActivities" value="Project Collaborations"><label for="projectCollaborations">Project Collaborations</label>
+    <input type="checkbox" id="codeReviews" name="interestedActivities" value="Code Reviews"><label for="codeReviews">Code Reviews</label>
+    <input type="checkbox" id="mentoring" name="interestedActivities" value="Mentoring"><label for="mentoring">Mentoring</label>
+    <input type="checkbox" id="bugBounties" name="interestedActivities" value="Bug Bounties"><label for="bugBounties">Bug Bounties</label>
+
+              <br><br>
+    Time Zone: <select id="timeZone">
+                <option value="PST">PST</option>
+                <option value="EST">EST</option>
+                <option value="MST">MST</option>
+                <option value="CST">CST</option>
+                <option value="UTC">UTC</option>
+              </select>
+              <br><br>
+              <!-- validate the checkboxes for interstedActivies and programmingLanguages -->
+    <input type="submit" name="forms" value="Submit" onsubmit="if (this.interestedActivities.checked == false) { alert ('You didn\'t choose any of the checkboxes!'); return false; } else { return true; }" >
+    <input type="reset" name="forms" value="Reset">
+
+    </form>
+
+    <script src="script.js"></script>
+  </body>
+</html>
